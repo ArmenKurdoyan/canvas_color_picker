@@ -1,0 +1,57 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#image {
+  width: 100%;
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  margin: 50px 0;
+}
+
+.header > div {
+  margin: 0 50px;
+}
+
+#dropper {
+  width: 50px;
+  background: #d9d9d9;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#dropper_button {
+  height: 35px;
+  width: 35px;
+}
+
+.color {
+  font-size: 25px;
+  align-self: center;
+}
+
+#picked_color_value {
+  margin-left: 20px;
+  height: 35px;
+  width: 200px;
+}
+
+.image_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#color_circle {
+  display: none;
+  position: absolute;
+}
