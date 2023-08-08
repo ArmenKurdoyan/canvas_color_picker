@@ -1,0 +1,5 @@
+To run the application run:
+
+1. npm install || yarn
+2. tsc index.ts
+3. npm start || yarn start
