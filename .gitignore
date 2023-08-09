@@ -4,3 +4,7 @@ node_modules
 .DS_Store
 
 dist/
+
+!.eslintrc.js
+*.js
+*.map

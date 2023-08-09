@@ -14,7 +14,7 @@
     "typescript": "^5.1.6"
   },
   "scripts": {
-    "build": "tsc --outDir ./dist/",
+    "build": "tsc --outDir .",
     "clean": "rm -rf ./dist",
     "start": "node ./dist/app.js",
     "dev": "npm run build && npx serve . -l 3000"

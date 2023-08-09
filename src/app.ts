@@ -3,7 +3,7 @@ import {
   handleMouseMove,
   handleCanvasClick,
   toggleDropper,
-} from "./canvas";
+} from "./canvas.ts";
 
 const canvas: HTMLCanvasElement = document.getElementById(
   "canvas"
@@ -12,8 +12,8 @@ const dropperButton: HTMLButtonElement = document.getElementById(
   "dropper"
 ) as HTMLButtonElement;
 
-const ctx: CanvasRenderingContext2D = initCanvas(canvas);
+const ctx: CanvasRenderingContext2D | null = initCanvas(canvas);
 
-canvas.addEventListener("mousemove", (e) => handleMouseMove(e, ctx, canvas));
-canvas.addEventListener("click", (e) => handleCanvasClick(e, ctx));
+canvas.addEventListener("mousemove", (e) => handleMouseMove(e, ctx!, canvas));
+canvas.addEventListener("click", (e) => handleCanvasClick(e, ctx!));
 dropperButton.addEventListener("click", () => toggleDropper(canvas));

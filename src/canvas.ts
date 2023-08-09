@@ -8,12 +8,12 @@ let imageRoot: HTMLImageElement;
 export function initCanvas(canvas: HTMLCanvasElement) {
   const canvasImage = <HTMLImageElement>document.getElementById("image");
 
-  const ctx: CanvasRenderingContext2D = canvas.getContext("2d");
+  const ctx: CanvasRenderingContext2D | null = canvas.getContext("2d");
   const image: HTMLImageElement = new Image();
   image.src = config.canvasImage;
   image.crossOrigin = config.crossOrigin;
   image.onload = () => {
-    ctx.drawImage(image, 0, 0);
+    ctx?.drawImage(image, 0, 0);
   };
 
   canvasImage.style.height = "100%";
