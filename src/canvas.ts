@@ -1,5 +1,6 @@
 import { displayColorCircle, rgbToHex } from "./utils";
 import { displayPickedColor } from "./colorInfo";
+import config from "./config";
 
 let isDropperActive: boolean = false;
 let imageRoot: HTMLImageElement;
@@ -9,9 +10,8 @@ export function initCanvas(canvas: HTMLCanvasElement) {
 
   const ctx: CanvasRenderingContext2D = canvas.getContext("2d");
   const image: HTMLImageElement = new Image();
-  image.src =
-    "https://img1.wallspic.com/previews/7/8/4/2/22487/22487-visual_arts-acrylic_paint-contemporary_art-graphic_design-film-x750.jpg";
-  image.crossOrigin = "Anonymous";
+  image.src = config.canvasImage;
+  image.crossOrigin = config.crossOrigin;
   image.onload = () => {
     ctx.drawImage(image, 0, 0);
   };
